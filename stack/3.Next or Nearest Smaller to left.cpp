@@ -1,4 +1,4 @@
-/* Question:Find the next smaller element to the left,if there is no greater element to the right,then give output as -1.
+/* Question:Find the next smaller element to the left,if there is no greater element to the left,then give output as -1.
 We have to give the output for the full given array and not just a single element.
 
 Analysis:We can solve this problem using the array and a nested for loop but the time Complexitity will be O(n^2) we can do this with stack for faster solution.
