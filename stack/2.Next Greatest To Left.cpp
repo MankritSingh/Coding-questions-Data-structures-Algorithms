@@ -3,7 +3,7 @@ We have to give the output for the full given array and not just a single elemen
 
 Analysis:We can solve this problem using the array and a nested for loop but the time Complexitity will be O(n^2) we can do this with stack for faster solution.
 Important:Whenever we have a loop where the inner loop is dependent on the outer loop ie the loop j dependent on the loop i then often stack provideds a better solution.
-Here we will traverse the array from left to right.We will store elements that are greater than the elements that come along the way ie the left most elements
+Here we will traverse the array from left to right.We will store elements that are greater than the elements that come along the way
 as we already know that we have greater value element ahead.
 Code:
 */
