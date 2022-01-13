@@ -27,11 +27,6 @@ int func(int n){
     if(n>1)
     cost=min(cost,func(n-2)+abs(v[n]-v[n-2]));
     return dp[n]=cost;
-    
-    // if(n==0) return 0;
-    // if(dp[n]!=-1) return dp[n];
-    // if(n>1)
-    // return dp[n]=min(func(n-1)+abs(v[n]-v[n-1]),func(n-2)+abs(v[n]-v[n-2]));
 }
 
 int main()
