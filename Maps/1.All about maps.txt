@@ -1,0 +1,23 @@
+Map-Key value pair
+similar to dictionary of Python and hashmap of java
+there are 3 type of map-map,unordered map and multimap
+
+Map(ordered)-use when we want sorted key or want to traverse in increasing or decreasing order
+1.Implemented using red black tree.Therefore the key values are stored in sorted order.
+2.Important time complexities
+  a.Insertion:Single element:O(logn)+rebalance of tree where n is size of the map.
+              N elements:O(nlogn)
+  b.Finding key:Single element:O(logn)+rebalance of tree where n is size of the map.
+              N elements:O(nlogn)
+  c.Deletion:Single element:O(logn)+rebalance of tree where n is size of the map.
+              N elements:O(nlogn)
+  d.Search:logn
+            
+            
+Map(unordered)-Can be used for hashing
+1.Implemented Hash table.Therefore the key values are stored in unsorted order.
+2.Important time complexities
+  a.Insertion:Single element:O(1) average and O(n) worst case
+  b.Finding key:same as above
+  c.Deletion:same as above
+  d.Search:same as above
