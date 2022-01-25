@@ -3,6 +3,7 @@ similar to dictionary of Python and hashmap of java
 there are 3 type of map-map,unordered map and multimap
 
 Map(ordered)-use when we want sorted key or want to traverse in increasing or decreasing order
+#The key or value can even be complex data types like array vector etc
 1.Implemented using red black tree.Therefore the key values are stored in sorted order.
 2.Important time complexities
   a.Insertion:Single element:O(logn)+rebalance of tree where n is size of the map.
