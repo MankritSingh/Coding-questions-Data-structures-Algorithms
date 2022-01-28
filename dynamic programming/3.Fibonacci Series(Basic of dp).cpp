@@ -1,10 +1,12 @@
 /*
 Question:Fibonacci Series using Dp
 
-Important:To construct the dp solutin what we do is that first we form the brute force recursion answer.Then we try to understand what steps we can store to reduce
+Important:To construct the dp solutin what we do is that first we form the brute force recursion answer.
+Then we try to understand what steps we can store to reduce
 the time taken and then store those values.
 
-Analysis: We usually solve fibonacci using recursion but the time complexity for it gets to 2^n.When we construct the recursion tree we observe that we are calculating
+Analysis: We usually solve fibonacci using recursion but the time complexity for it gets to 2^n.
+When we construct the recursion tree we observe that we are calculating
 the same values again and again.Therefore we use dp and store the values that we calculate.This reduces the complexity to O(n).
 */
 
