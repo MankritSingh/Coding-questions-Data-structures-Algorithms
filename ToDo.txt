@@ -2,3 +2,4 @@
 2)implement binary tree using array
 3)solve the longest increasing subsequence problem using binary tree
 4)Digit dp and solve google kickstart A2022 question
+5)learn two pointer approach-Q1(https://codeforces.com/problemset/problem/466/C)
