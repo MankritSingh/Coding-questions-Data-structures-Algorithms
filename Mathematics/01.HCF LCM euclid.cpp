@@ -1,4 +1,4 @@
- 
+//Time complexity O(log min(a,b)) where a and b are the two numbers
 #include<bits/stdc++.h>
 using namespace std;
  
