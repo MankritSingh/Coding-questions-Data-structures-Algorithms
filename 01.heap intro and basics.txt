@@ -1,0 +1,27 @@
+1)Heap representation for problem solving
+	we represent heap as a stack of size k for easy understanding.In max heap,the top element of stack is the largest element and in case of min heap,the top element is the lowest element
+
+2)Heap Question Identification
+	The heap question are identified by the given keywords and phrase
+		1)kth element.eg k largest,k smallest etc
+		2)smallest or largest element
+		3)When we can return the answer in any order.eg find k biggest elements.When we use heap,we will get the top k biggest elements but the heap doesnt store in sorted order,thus this gives us a clue.
+
+3)Which heap to use(we use opposites)
+	1)If we need to find kth largest element-->Use min heap
+	2)If we need to find kth smallest element-->Use max heap
+
+4)Time complexity
+	We can solve the heap problems also by sorting.Sorting's time complexity is n logn.
+	In heap the time complexity is nlogk.
+
+5)Heap implementation using STL
+	1)max heap: priority_queue<int> maxh;
+
+	2)min heap: priority_queue<int,vector<int>,greater<int>>minh;
+	we can also use maxheap to implement minheap.we multiply the values by -1 before putting in heap and after removing from heap.
+
+6)Using Pair in heap
+	we can also use pair in heap.instead of putting the pair syntax everywhere we will type define and use the short form.
+	typedef pair<int,pair<int,int>> ppi;
+	now eg we implement minh: priority_queue<ppi,vector<ppi>,greater<ppi>> minh;
