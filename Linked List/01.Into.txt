@@ -1,0 +1,6 @@
+Linked list is a dynamic data structure.It can grow and shrink dynamically.
+It is used when:
+  (1)when the size of data keeps changing or keeps expanding
+  (2)When we need to be careful about memory ie it helps prevent wastage of memory
+Disadvantage
+  (1)Insertion in middle or accessing an element in middle is time consuming
