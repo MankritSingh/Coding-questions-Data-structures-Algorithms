@@ -1,3 +1,4 @@
+//video seen https://www.youtube.com/watch?v=q8gdBn9RPeI&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=49
 #include<bits/stdc++.h>
 using namespace std;
 
