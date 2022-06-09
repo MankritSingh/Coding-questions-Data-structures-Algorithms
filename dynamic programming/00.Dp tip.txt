@@ -1,0 +1,8 @@
+Source:striver
+steps of solving a dp question
+1)try to represent the problem in terms of index.
+2)try all the possible stuff,with respect to the question,on that index
+3)If question is:
+  i)find all ways=sum all stuff
+  ii)find min=minimum of all stuff
+  iii)find max=max of all stuff
