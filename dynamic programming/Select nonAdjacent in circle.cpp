@@ -14,3 +14,22 @@ we should think about using it.What we can do is solve the questions with 2 case
 does not exist,and the second case where we acts as the last case does not exist.
 Now we have 2 answer,Just find the max of them and you have your answer.
 */
+
+#define ll long long
+ll sl(vector<int>& val,int n,vector<ll>& dp){
+   if(n==0) return val[0];
+    if(n==1) return max(val[0],val[1]);
+    if(dp[n]!=-1) return dp[n];
+    return dp[n]=max(val[n]+sl(val,n-2,dp),sl(val,n-1,dp));
+}
+
+long long int houseRobber(vector<int>& valueInHouse)
+{
+    vector<ll>dp(valueInHouse.size()+1,-1);
+    if(valueInHouse.size()==1) return valueInHouse[0];
+    ll ans1=sl(valueInHouse,valueInHouse.size()-2,dp);
+    valueInHouse[0]=0;//we set the first element to 0 so it acts like it is included
+    fill(dp.begin(),dp.end(),-1);
+    ll ans2=sl(valueInHouse,valueInHouse.size()-1,dp);
+    return max(ans1,ans2);
+}
