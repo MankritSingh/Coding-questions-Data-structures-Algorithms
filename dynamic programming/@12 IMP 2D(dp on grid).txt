@@ -1,0 +1,8 @@
+video:striver
+Dp on girds can be mostly divided into six sub groups
+  1)Count Paths
+  2)Count Paths with obstacle
+  3)Min path sum
+  4)Max path sum
+  5)triangle
+  6)2 start point
