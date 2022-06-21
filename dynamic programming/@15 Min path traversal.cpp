@@ -41,3 +41,25 @@ int minSumPath(vector<vector<int>> &grid) {
     }
     return dp[r-1][c-1];
 }
+//iterative with space  optimization O(n^2)->O(n)
+int minSumPath(vector<vector<int>> &grid) {
+    int r=grid.size();
+    int c=grid[0].size();
+//     vector<vector<int>>dp(r,vector<int>(c,-1));
+//     return s(r-1,c-1,grid,dp);  
+    vector<int>prev(c,0);
+    for(int i=0;i<r;i++){
+        vector<int>temp(c,0);
+        for(int j=0;j<c;j++){
+            if(i==0 && j==0) temp[j]=grid[i][j];
+            else{
+                    int left=INT_MAX,up=INT_MAX;
+                    if(j>0) left=temp[j-1]+grid[i][j];
+                    if(i>0) up=prev[j]+grid[i][j];
+                    temp[j]=min(left,up);
+            }
+        }
+        prev=temp;
+    }
+    return prev[c-1];
+}
