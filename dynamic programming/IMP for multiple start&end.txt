@@ -1,0 +1,2 @@
+When we have multiple start and end point and for one case we have single start/End point
+We always form the solution from the fixed starting point.
