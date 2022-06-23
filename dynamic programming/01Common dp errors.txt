@@ -1,0 +1,6 @@
+Some common errors that we do during dp are
+1)Always make sure your base statments are in correct order while writing recursion.One statement may need to be checked at
+the start,otherwise we may get different answer.
+
+2)when declaring dp array/vector.Make sure the size of the dimensions of the dp array are correct.We should always cross check
+as we count from 0 and therefore may need to have dimension greater than the limit
