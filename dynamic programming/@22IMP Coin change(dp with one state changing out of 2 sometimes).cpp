@@ -57,3 +57,28 @@ int minimumElements(vector<int> &num, int x)
     else return ans;
     
 }
+//space optimized
+int minimumElements(vector<int> &num, int x)
+{
+    vector<int>dp(x+1,0);
+    //sort(num.begin(),num.end());
+//     int ans=sol(num.size()-1,num,x,dp);
+//     if(ans>x)    return -1;
+//     else    return ans;
+    for(int i=0;i<x+1;i++){
+        if(i%num[0]==0)    dp[i]=i/num[0];
+        else dp[i]=1e5;
+    }
+    for(int i=1;i<num.size();i++){
+        for(int j=0;j<x+1;j++){
+              int notTake=dp[j];
+              int take=1e5;
+              if(num[i]<=j)    take=1+dp[j-num[i]];
+              dp[j]=min(take,notTake); 
+        }
+    }
+    int ans= dp[x];
+    if(ans>=1e5)    return -1;
+    else return ans;
+    
+}
