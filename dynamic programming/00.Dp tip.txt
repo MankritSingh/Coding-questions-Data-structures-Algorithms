@@ -6,3 +6,6 @@ steps of solving a dp question
   i)find all ways=sum all stuff
   ii)find min=minimum of all stuff
   iii)find max=max of all stuff
+
+4)When we are doing multi dimensional dp.Sometimes we may update only one index of the dp.usually we do that with target and understand that easily
+but sometimes we have to keep the index unchanged.This is done to get all possible sequences.
