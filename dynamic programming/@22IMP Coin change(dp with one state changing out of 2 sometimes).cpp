@@ -28,7 +28,6 @@ int sol(int n,vector<int> &num, int x,vector<vector<int>>&dp){
 int minimumElements(vector<int> &num, int x)
 {
     vector<vector<int>>dp(num.size(),vector<int>(x+1,-1));
-    sort(num.begin(),num.end());
     int ans=sol(num.size()-1,num,x,dp);
     if(ans>x)    return -1;
     else    return ans;
