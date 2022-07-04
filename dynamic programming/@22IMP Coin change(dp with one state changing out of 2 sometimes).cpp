@@ -33,3 +33,27 @@ int minimumElements(vector<int> &num, int x)
     else    return ans;
 }
 //iterative
+int minimumElements(vector<int> &num, int x)
+{
+    vector<vector<int>>dp(num.size(),vector<int>(x+1,0));
+    //sort(num.begin(),num.end());
+//     int ans=sol(num.size()-1,num,x,dp);
+//     if(ans>x)    return -1;
+//     else    return ans;
+    for(int i=0;i<x+1;i++){
+        if(i%num[0]==0)    dp[0][i]=i/num[0];
+        else dp[0][i]=1e5;
+    }
+    for(int i=1;i<num.size();i++){
+        for(int j=0;j<x+1;j++){
+              int notTake=dp[i-1][j];
+              int take=1e5;
+              if(num[i]<=j)    take=1+dp[i][j-num[i]];
+              dp[i][j]=min(take,notTake); 
+        }
+    }
+    int ans= dp[num.size()-1][x];
+    if(ans>=1e5)    return -1;
+    else return ans;
+    
+}
