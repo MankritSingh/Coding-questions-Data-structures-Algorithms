@@ -11,6 +11,12 @@ and remain at the same index.SO we can try all the possible sequences.
 SO the most IMPORTANT thing to learn from this question is that sometimes we only change on index/parameter
 of our given dp.
 
+Time complexity:
+In this question ,The time complexity is 2^n for recursion usually,but here the branching factor is 2 but the depth will be more
+than n,as we stay at n for more than once.THerefore we can just say that the time compelxity is exponential
+Space complexity:
+The space complexity is usually n for such dp,but here the space will be increased as there is multiple function call for a given value.
+Now lets say the coin is 1 and the the target T,then the space complexity will be O(T)
 */
 //recursion
 #include<algorithm>
