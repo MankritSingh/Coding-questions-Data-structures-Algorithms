@@ -12,3 +12,25 @@ SO the most IMPORTANT thing to learn from this question is that sometimes we onl
 of our given dp.
 
 */
+//recursion
+#include<algorithm>
+int sol(int n,vector<int> &num, int x,vector<vector<int>>&dp){
+    if(n==0){
+        if(x%num[0]==0)    return x/num[0];
+        else return 1e5;
+    }
+    if(dp[n][x]!=-1)    return dp[n][x];
+    int notTake=sol(n-1,num,x,dp);
+    int take=1e5;
+    if(num[n]<=x)    take=1+sol(n,num,x-num[n],dp);
+    return dp[n][x]=min(take,notTake);
+}
+int minimumElements(vector<int> &num, int x)
+{
+    vector<vector<int>>dp(num.size(),vector<int>(x+1,-1));
+    sort(num.begin(),num.end());
+    int ans=sol(num.size()-1,num,x,dp);
+    if(ans>x)    return -1;
+    else    return ans;
+}
+//iterative
