@@ -1,0 +1,64 @@
+/*Question link:https://www.codingninjas.com/codestudio/problems/ways-to-make-coin-change_630471
+Question:We are an array with denominations of coin.We have to find the number of ways we can do so.The importnt difference in this question is that
+we have infinite supply of each type of coin.THerefore we can take a coin any number of time.
+
+Analysis:It is quite similar to the prevoius question.We simply calculate all ways in which we can form the the given value.
+Again here we keep the value of n unchanged when we take a given value.
+
+
+*/
+//Recursive
+long sol(int n,int *arr,int value,vector<vector<long>>&dp){
+    if(n==0){
+        if(value%arr[n]==0)    return 1;
+        else return 0;
+    }
+    if(dp[n][value]!=-1)    return dp[n][value];
+    long notTake=sol(n-1,arr,value,dp);
+    long take=0;
+    if(arr[n]<=value)    take=sol(n,arr,value-arr[n],dp);
+    return dp[n][value]=take+notTake;
+}
+
+long countWaysToMakeChange(int *denominations, int n, int value)
+{
+    vector<vector<long>>dp(n,vector<long>(value+1,-1));
+    return sol(n-1,denominations,value,dp);
+}
+
+//iterative
+long countWaysToMakeChange(int *denominations, int n, int value)
+{
+    vector<vector<long>>dp(n,vector<long>(value+1,0));
+    for(int i=0;i<value+1;i++){
+        if(i%denominations[0]==0)    dp[0][i]=1;
+        else dp[0][i]=0;
+    }
+    for(int i=1;i<n;i++){
+        for(int j=0;j<value+1;j++){
+            long notTake=dp[i-1][j];
+            long take=0;
+            if(denominations[i]<=j) take=dp[i][j-denominations[i]];
+            dp[i][j]=take+notTake;
+        }
+    }
+    return dp[n-1][value];
+}
+//space optimized
+long countWaysToMakeChange(int *denominations, int n, int value)
+{
+    vector<long>dp(value+1,0);
+    for(int i=0;i<value+1;i++){
+        if(i%denominations[0]==0)    dp[i]=1;
+        else dp[i]=0;
+    }
+    for(int i=1;i<n;i++){
+        for(int j=0;j<value+1;j++){
+            long notTake=dp[j];
+            long take=0;
+            if(denominations[i]<=j) take=dp[j-denominations[i]];
+            dp[j]=take+notTake;
+        }
+    }
+    return dp[value];
+}
