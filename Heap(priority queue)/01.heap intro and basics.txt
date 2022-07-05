@@ -23,7 +23,7 @@
 
 6)Using Pair in heap
 	*) As we know the syntax of pair is pair<int,int>.We can also insert a pair in the priority queue.Eg priority_queue<pair<int,int>>m;
-	The elements are accessed through m.top().first and m.top().second .
+	The elements are accessed through m.top().first and m.top().second .To add a pair we m.push(make_pair(val1,val2));
 	we can also use pair in heap.instead of putting the pair syntax everywhere we can type define and use the short form.
 	typedef pair<int,pair<int,int>> ppi;
 	now eg we implement minh: priority_queue<ppi,vector<ppi>,greater<ppi>> minh;
