@@ -22,6 +22,8 @@
 	we can also use maxheap to implement minheap.we multiply the values by -1 before putting in heap and after removing from heap.
 
 6)Using Pair in heap
-	we can also use pair in heap.instead of putting the pair syntax everywhere we will type define and use the short form.
+	*) As we know the syntax of pair is pair<int,int>.We can also insert a pair in the priority queue.Eg priority_queue<pair<int,int>>m;
+	The elements are accessed through m.top().first and m.top().second .
+	we can also use pair in heap.instead of putting the pair syntax everywhere we can type define and use the short form.
 	typedef pair<int,pair<int,int>> ppi;
 	now eg we implement minh: priority_queue<ppi,vector<ppi>,greater<ppi>> minh;
