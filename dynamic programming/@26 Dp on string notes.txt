@@ -1,0 +1,8 @@
+Types of problem-1)Comparision
+                 2)replace/edit
+                 
+*)In string questions,we have questions commonly on subsequence.Subsequence is taking letters of elements from a string string an forming a new string.But the order should be mentained
+ie we dont need to take the consequtive elements,we can take an element and skip the next and take the one after that,but we should only choose in the order of the
+original string
+
+*)Like we had take and not take in dp on subsequences, we have match or not match in dp on strings.
