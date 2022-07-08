@@ -36,6 +36,17 @@ int lcs(string s, string t)
             }
         }
     }
+	//    int r=lenS-1,col=lenT-1;
+    //string lcm="";
+// 	while(r>=0 && col>=0){//to print the LCS
+//         if(s[r]==t[col]){
+//             lcs.push_back(s[r]);
+//             r--;col--;
+//         }
+//         else if(dp[r][col-1]>dp[r-1][col])    col--;
+//         else r--;
+//     }
+//     //cout<<lcs;
     return dp[lenS-1][lenT-1];
     
 }
