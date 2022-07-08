@@ -1,0 +1,2 @@
+This is the same question as longest common subsequence.We just reverse and store a cpy of the original string.
+Now we simply find the LCS of the 2 strings and get our answer
