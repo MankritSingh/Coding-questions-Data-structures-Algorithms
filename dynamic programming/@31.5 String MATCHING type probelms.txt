@@ -1,0 +1,2 @@
+String matching question are similar to the prevoius solved question.
+1)Distict Subsequences-In this we use the same approach that we used in no of ways a given sum can be generated
