@@ -6,3 +6,5 @@ ie we dont need to take the consequtive elements,we can take an element and skip
 original string
 
 *)Like we had take and not take in dp on subsequences, we have match or not match in dp on strings.
+
+*)One of the most important concept of dp on string is LCS that is longest common subsequence.LCS is used in many questions and its application can be found/understood directly or indirectly.
