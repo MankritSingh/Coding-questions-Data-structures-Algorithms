@@ -11,7 +11,7 @@ Now we compare them,we can have 2 results->first they match.Just add a 1 and red
  This gives us our answer.
  */
  //recursive written in earlier post.check the dp github
- //iterative
+ //iterative solution 1
  #include <vector>
 int lcs(string s, string t)
 {
@@ -49,6 +49,22 @@ int lcs(string s, string t)
 //     //cout<<lcs;
     return dp[lenS-1][lenT-1];
     
+}
+//Iterative solution 2
+string shortestSupersequence(string a, string b)
+{
+    int alen=a.length();
+    int blen=b.length();
+	vector<vector<int>>dp(alen+1,vector<int>(blen+1,0));
+    for(int i=1;i<alen+1;i++){
+        for(int j=1;j<blen+1;j++){
+          if(a[i-1]==b[j--1])    dp[i][j]=1+dp[i-1][j-1];
+            else{
+                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+            }
+        }
+    }
+    return dp[alen][blen]
 }
 //space optimized solution
 #include <vector>
