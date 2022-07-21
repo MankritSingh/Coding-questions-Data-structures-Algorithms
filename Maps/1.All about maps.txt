@@ -1,3 +1,5 @@
+IMP s.begin() points to the first item but s.end() points to the element after the last element.Thats how iterators work
+
 Map-Key value pair
 similar to dictionary of Python and hashmap of java
 there are 3 type of map-map,unordered map and multimap
