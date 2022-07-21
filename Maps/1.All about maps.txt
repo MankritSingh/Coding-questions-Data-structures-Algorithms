@@ -4,6 +4,8 @@ Map-Key value pair
 similar to dictionary of Python and hashmap of java
 there are 3 type of map-map,unordered map and multimap
 
+One important difference ordered vs unordered is that we can only use primitive datatype in unordered_map and unordered_set as key because they work on Hashtable and other datatype/container like pair etc cant be used as there is no hash function by default.We have to write the hash function ourselves or use Boost library
+
 Map(ordered)-use when we want sorted key or want to traverse in increasing or decreasing order
 #The key or value can even be complex data types like array vector etc
 1.Implemented using red black tree.Therefore the key values are stored in sorted order.
