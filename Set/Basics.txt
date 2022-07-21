@@ -1,0 +1,2 @@
+Sets have the same internal working as Maps.
+Sets hold unique values and ordered set and unordered set are similar in working/implementation
