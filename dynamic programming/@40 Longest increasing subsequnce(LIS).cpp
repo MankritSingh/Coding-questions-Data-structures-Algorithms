@@ -4,6 +4,7 @@ we need to know the prevoius taken element,so now our dp indexes are dp[n][prev 
 Now when we start,we have no previous element we will have -1. Now we can store negative element in the array so that causes an issue.
 To solve this problem,we will store all values of prevElement as a n+1.
 
+WHen we run the code,we observe that for big cases we get runtime error,that is because the array we are declaring will cross the limit
 */
 #include<vector>
 int sol(int arr[],int n,int prev,vector<vector<int>>&dp){
