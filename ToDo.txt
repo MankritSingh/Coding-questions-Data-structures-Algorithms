@@ -1,4 +1,6 @@
-0)revise and write code for Kadane algo
+
+revise and write code for Kadane algo(done)
+0)practise string concatenation
 1)implement binary tree using structure ie linked list
 2)implement binary tree using array
 3)solve the longest increasing subsequence problem using binary tree
