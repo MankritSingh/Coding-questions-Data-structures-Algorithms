@@ -1,0 +1,12 @@
+1)When we need to convert number to string
+  string word=to_string(number);
+  
+2)When we need to char we can direct append
+  string word=ch;
+  
+3)delete char at pos or in a range
+  	string str="APPLE";
+    str.erase(str.begin() + 3, str.begin()+4);//delete char at pos 3.
+    str.erase(str.begin()+0,str.begin()+3);//deleted from 0 to 2
+    cout<<str;
+
