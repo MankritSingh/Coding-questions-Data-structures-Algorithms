@@ -1,0 +1,9 @@
+Partion dp
+THe questions that have to be solved in a particular way are usally solved using partition dp.
+These questions may have different answer depending on the way we solve eg maths equation with bracket and without bracket,MCM etc
+multiple way to solve and have to find the best way to solve.
+Rules/step of partition dp
+1)Start with the entire block array thats given.(representing start with i and end with j)
+2)Sub divide the block into smaller probelms ie partitions
+3)try all partitions(trying all ways).Run a loop to try all partition
+4)Select the best partitions
