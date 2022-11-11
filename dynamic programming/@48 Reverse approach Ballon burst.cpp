@@ -22,7 +22,8 @@ int sol(vector<int>&a,int i,int j,vector<vector<int>>&dp){
        if(dp[i][j]!=-1)    return dp[i][j];
         int ans=INT_MIN;
         for(int k=i;k<=j;k++){
-        int earn=(a[i-1]*a[k]*a[j+1]) +sol(a,i,k-1,dp)+sol(a,k+1,j,dp);
+	//int earn=(a[i-1]*a[k]*a[j+1]) +sol(a,i,k-1,dp)+sol(a,k+1,j,dp); eariler using this,but it gives immediate neighbour and is appraoch of first ballon to last
+        int earn=(a[i-1]*a[k]*a[j+1]) +sol(a,i,k-1,dp)+sol(a,k+1,j,dp);//this is approach of last to first works correctly
         ans=max(ans,earn);
     }
     return dp[i][j]=ans;
