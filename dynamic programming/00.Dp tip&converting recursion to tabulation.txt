@@ -17,3 +17,7 @@ dp[n+1][m+1] instead of dp[n][m].MAKE SURE YOU DECLARE CORRECT DP AND ALL FOR LO
 ii)Write base conditions ie fill dp array with the base condition values.
 iii)copy the code(Recurence) as it is and just change the recursion calls to dp array calls
 iv)Tabulation coded is ready
+
+
+*its important that the problems are independent when we divide them in partitions.If they are not independent,then we should try to approach it opposite 
+or different manner.Like in burst ballons.
