@@ -35,3 +35,21 @@ int maxCoins(vector<int>& a)
     vector<vector<int>>dp(a.size(),vector<int>(a.size(),-1));
 	return sol(a,1,a.size()-2,dp);
 }
+//iterative
+int maxCoins(vector<int>& a)
+{
+    a.insert(a.begin(),1);
+    a.push_back(1);
+    vector<vector<int>>dp(a.size(),vector<int>(a.size(),0));
+    for(int i=a.size()-2;i>=1;i--){
+        for(int j=i;j<a.size()-1;j++){
+            int ans=INT_MIN;
+            for(int k=i;k<=j;k++){
+                int cost=(a[i-1]*a[k]*a[j+1])+dp[i][k-1]+dp[k+1][j];
+                ans=max(ans,cost);
+            }
+            dp[i][j]=ans;
+        }
+    }
+    return dp[1][a.size()-2];
+}
