@@ -2,6 +2,8 @@ Partion dp
 THe questions that have to be solved in a particular way are usally solved using partition dp.
 These questions may have different answer depending on the way we solve eg maths equation with bracket and without bracket,MCM etc
 multiple way to solve and have to find the best way to solve.
+*its important that the problems are independent when we divide them in partitions.If they are not independent,then we should try to approach it opposite 
+or different manner.Like in burst ballons.
 Rules/step of partition dp
 1)Start with the entire block array thats given.(representing start with i and end with j)
 2)Sub divide the block into smaller probelms ie partitions
