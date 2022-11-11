@@ -33,3 +33,23 @@ int cost(int n, int c, vector<int> &cuts){
     vector<vector<int>>dp(c+1,vector<int>(c+1,-1));
     return sol(cuts,1,c,dp);
 }
+//iterative
+int cost(int n, int c, vector<int> &cuts){
+    sort(cuts.begin(),cuts.end());
+    cuts.insert(cuts.begin(),0);
+    cuts.push_back(n);
+    vector<vector<int>>dp(c+2,vector<int>(c+2,0));
+    for(int i=c;i>=1;i--){
+        for(int j=i;j<=c;j++){//we start from i as we have included the base case here itself i>j return 0
+            int ans=INT_MAX;
+            for(int k=i;k<=j;k++){
+                int cost=(cuts[j+1]-cuts[i-1])+
+                dp[i][k-1]+dp[k+1][j];
+                ans=min(ans,cost);
+            }
+            dp[i][j]=ans;
+         }
+    }
+    return dp[1][c];
+    //return sol(cuts,1,c,dp);
+}
