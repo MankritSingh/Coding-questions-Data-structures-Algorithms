@@ -12,3 +12,7 @@
 4)Upper case and lower case
   transform(str.begin(),str.end(),str.begin(),::toupper);
   transform(str.begin(),str.end(),str.begin(),::tolower);
+
+5)String to integer
+  int stringToInt=stoi(num,0,2);//covert string to number.parameter are(string name,0,base)keep base as 10 for decimal
+	int stringToll=stoll(num,0,10);//covert string to ll.
